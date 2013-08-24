@@ -50,6 +50,6 @@ class Paste(Object):
 
     def _hook_id(self, info):
         if isinstance(info, dict) and \
-            'result' in info.keys() and \
+            'result' in info and \
                 'id' in info['result']:
             self.id = str(info['result']['id'])
