@@ -45,7 +45,7 @@ class Paste(Object):
         self._get(self.SHOW_URL % self.id)
 
     @asynchronous
-    def lists(self, project, page):
+    def list(self, project, page):
         self._get(self.LIST_URL % (project, page))
 
     def _hook_id(self, info):

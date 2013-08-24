@@ -49,7 +49,7 @@ def __phase2_completed_cb(paste, info):
     paste = Paste()
     paste.connect('completed', __phase3_completed_cb)
     paste.connect('failed', __phase3_failed_cb)
-    paste.lists('tch', 1)
+    paste.list('tch', 1)
 
 
 def __phase1_completed_cb(paste, info):
