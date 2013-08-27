@@ -48,6 +48,9 @@ class Paste(Object):
     def list(self, project, page):
         self._get(self.LIST_URL % (project, page))
 
+    def _hook_header(self, params=None):
+        return ['Expect:']
+
     def _hook_id(self, info):
         if isinstance(info, dict) and \
             'result' in info and \
